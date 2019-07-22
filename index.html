@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+  <link rel="icon" href="mikrotikico.ico" />
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+
+  <title>Mikrotik Manager</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="css/bootstrap.min.css" rel="stylesheet" />
+</head>
+
+<body>
+  <div class="container">
+    <div class="card mt-3">
+      <h3 class="text-center">Mikrotik Manager Options</h3>
+      <div class="ml-4">
+        Target :
+        <div class="form-check form-check-inline lg-4">
+          <input class="form-check-input" type="radio" name="target" id="rball" value="allstore" checked>
+          <label class="form-check-label" for="rball">All Store</label>
+        </div>
+        <div class="form-check form-check-inline lg-8">
+          <input class="form-check-input" type="radio" name="target" id="rbcustom" value="customstore">
+          <label class="form-check-label" for="rbcustom">Custom Store</label>
+          <input class="form-check-input ml-3 " type="text" name="txtcustom" id="txtcustom"
+            placeholder="Input Kodetoko">
+        </div>
+
+      </div>
+      <div class="ml-4">
+        Router Type :
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="tiperb" id="rbkoneksi" value="ip_router" checked>
+          <label class="form-check-label" for="rbkoneksi">Router Koneksi</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="tiperb" id="rbwdcp" value="ip_router_edc">
+          <label class="form-check-label" for="rbwdcp">Router WDCP</label>
+        </div>
+      </div>
+      <div class="ml-4">
+        Connection Type :
+        <div class="ml-2 form-check-inline">
+          <input class="form-check-input" type="checkbox" name="cbfiber" id="cbfiber" />
+          <label class="form-check-label" for="cbfiber">
+            Fiber Optik
+          </label>
+        </div>
+        <div class="form-check-inline">
+          <input class="form-check-input" type="checkbox" name="cbvsat" id="cbvsat" />
+          <label class="form-check-label" for="cbvsat">
+            VSAT
+          </label>
+        </div>
+        <!-- <div class="form-check-inline">
+          <input class="form-check-input" type="checkbox" name="cbbackup" id="cbbackup" />
+          <label class="form-check-label" for="cbbackup">
+            Backup MS
+          </label>
+        </div> -->
+      </div>
+      <div class="ml-4">
+        Execution mode :
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="mode" id="rbview" value="view" checked>
+          <label class="form-check-label" for="rbview">Get Config</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="mode" id="rbexec" value="execute">
+          <label class="form-check-label" for="rbexec">Execute Script</label>
+        </div>
+      </div>
+
+      <button type="button" class="btn btn-primary m-2" id="btnproses">PROSES</button>
+
+
+    </div>
+    <h4 class="status">Status</h4>
+    <div class="progress md-progress" style="height: 20px">
+      <div class="progress-bar" id="pbproses" role="progressbar" style="width: 0%; height: 20px" aria-valuenow="0"
+        aria-valuemin="0" aria-valuemax="100"></div>
+    </div>
+    <table class="table isi">
+
+    </table>
+</body>
+<script src="main.js"></script>
+
+</html>
